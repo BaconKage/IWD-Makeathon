@@ -5,26 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-function showImagePopup(imagePath) {
-    var popup = document.createElement("div");
-    popup.className = "image-popup";
-
-    var img = document.createElement("img");
-    img.src = imagePath;
-
-    var closeBtn = document.createElement("span");
-    closeBtn.className = "close-btn";
-    closeBtn.innerHTML = "&times;";
-    closeBtn.onclick = function () {
-        document.body.removeChild(popup);
-    };
-
-    popup.appendChild(img);
-    popup.appendChild(closeBtn);
-
-    document.body.appendChild(popup);
-}
-
 window.onscroll = function () {
     scrollFunction();
 };
